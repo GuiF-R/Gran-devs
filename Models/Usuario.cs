@@ -27,4 +27,11 @@ public class Usuario
 
     public string FotoPerfil { get; set; }
 
+    [Required(ErrorMessage = "Informe a Area de atuação")]
+
+    public int AreaAtuacaoId { get; set; }
+    [ForeignKey("AreaAtuacaoId")]
+
+    public AreaAtuacao AreaAtuacao { get; set; } 
+
 }
